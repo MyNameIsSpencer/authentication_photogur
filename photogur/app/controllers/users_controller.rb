@@ -11,9 +11,8 @@ class UsersController < ApplicationController
     @user.password_confirmation = params[:user][:password_confirmation]
 
     if @user.save
-      flash[:notice] = "You have successfully been CREATED!!!!"
+      flash[:notice] = "You have been successfully CREATED!!!!"
        redirect_to root_path#user_path(@user)
-       flash[:notice] = "You have successfully been CREATED!!!!"
 
     else
       render :new
